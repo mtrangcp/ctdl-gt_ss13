@@ -34,7 +34,10 @@ Stack createStack(int max) {
     Stack stack ;
     stack.top = -1;
     for (int i = 1; i <= max; i++) {
-        push(&stack, i);
+        int n;
+        printf("Nhap n: ");
+        scanf("%d", &n);
+        push(&stack, n);
     }
     return stack;
 }

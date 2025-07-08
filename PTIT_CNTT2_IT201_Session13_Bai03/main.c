@@ -52,20 +52,20 @@ void show(Stack *stack) {
     }
 }
 
-int top(Stack *stack) {
+int pop(Stack *stack) {
     if (isEmpty(stack)) {
         return -1;
     }
-    return stack->data[stack->top];
+    return stack->data[stack->top--];
 }
 
 int main(void) {
     Stack stack = createStack(0);
     show(&stack);
-    if ( top(&stack) == -1 ) {
+    if ( pop(&stack) == -1 ) {
         printf("No element in stack\n");
     }else {
-        printf("\n%d", top(&stack));
+        printf("\n%d", pop(&stack));
     }
 
     return 0;
